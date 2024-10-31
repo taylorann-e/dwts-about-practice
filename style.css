@@ -1,0 +1,73 @@
+/* Base and Flexbox Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header,
+  .footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .main-content {
+    width: 90%;
+    max-width: 800px;
+    padding: 1em;
+  }
+  
+  .main-content__title {
+    color: #333;
+    margin-bottom: 0.5em;
+  }
+  
+  .main-content__list {
+    margin-left: 1em;
+  }
+  
+  /* BEM CSS Transitions and Animations */
+  .main-content__text, .main-content__list-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .main-content__text:hover, .main-content__list-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* BEM CSS Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .main-content__intro {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header__title, .main-content__title, .footer__text {
+      font-size: 1.2em;
+    }
+  }
+  
