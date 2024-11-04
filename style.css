@@ -26,11 +26,13 @@
     width: 90%;
     max-width: 800px;
     padding: 1em;
+    text-align: center;
   }
   
   .main-content__title {
     color: #333;
     margin-bottom: 0.5em;
+    text-align: center;
   }
   
   .main-content__list {
