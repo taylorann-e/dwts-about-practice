@@ -28,7 +28,16 @@
     padding: 1em;
     text-align: center;
   }
-  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .main-content__title, .main-content__text {
+    text-align: center;
+  }
+    
   .main-content__title {
     color: #333;
     margin-bottom: 0.5em;
@@ -37,6 +46,12 @@
   
   .main-content__list {
     margin-left: 1em;
+  }
+  .main-content {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
   }
   
   /* BEM CSS Transitions and Animations */
