@@ -1,163 +1,88 @@
-/* Base and Flexbox Layout */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Background container with disco ball background */
+.background {
+  background-image: url(background.jpg); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Main header styling */
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Content container styling */
+.content-container {
+  background-color: white;
+  width: 80%;
+  max-width: 900px;
+  padding: 2rem;
+  border: 5px solid #aaa; /* Border around the content */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Styling for main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-content__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a4a8b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main-content__text {
+  text-align: justify;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Image styling */
+img {
+  width: 100%; /* Ensures all images are the same width */
+  height: auto;
+  border-radius: 8px; /* Optional for rounded corners */
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer__text {
+  color: #333;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+    padding: 1rem;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .header__title {
+    font-size: 2rem;
   }
-  
-  .header,
-  .footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-  }
-  
-  .main-content {
-    width: 90%;
-    max-width: 800px;
-    padding: 1em;
-    text-align: center;
-  }
-  img {
-    width: 300px; /* Adjust this size as needed */
-    height: 200px; /* Maintain aspect ratio by adjusting height */
-    object-fit: cover; /* Ensures the image doesn't stretch */
-    display: block;
-    margin: 0 auto;
-  }
-  
-  
-  .main-content__title, .main-content__text {
-    text-align: center;
-  }
-  .main-content {
-    width: 100%;
-    max-width: 800px; /* Limits the width of the text block */
-    margin: 0 auto;   /* Centers the content */
-    padding: 1em;
-  }
-  
-  .main-content__text, .main-content__title {
-    text-align: center;
-    width: 80%; /* Scales down text blocks to leave space on sides */
-    margin: 0 auto; /* Centers the text block */
-  }
-  
+
   .main-content__title {
-    color: #333;
-    margin-bottom: 0.5em;
-    text-align: center;
+    font-size: 1.5rem;
   }
-  
-  .main-content__list {
-    margin-left: 1em;
-  }
-  .main-content {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  
-  /* BEM CSS Transitions and Animations */
-  .main-content__text, .main-content__list-item {
-    transition: transform 0.3s ease;
-  }
-  
-  .main-content__text:hover, .main-content__list-item:hover {
-    transform: scale(1.05);
-  }
-  .page-wrapper {
-    display: flex;
-    height: 100vh; /* Full viewport height */
-    width: 100%;
-  }
-  
-  .page-wrapper__section {
-    flex: 1;
-  }
-  
-  .page-wrapper__section--left,
-  .page-wrapper__section--right {
-    background-color: #000; /* Black for the outer sections */
-  }
-  
-  .page-wrapper__section--center {
-    background-color: #fff; /* White or any background color for the center */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em;
-    width: 80%; /* Adjust width to control space in the center */
-  }
-  
-  .main-content {
-    width: 100%; /* Let the main content span the entire center section */
-    max-width: 800px; /* Keep your existing maximum width for text */
-  }
-  
-  /* BEM CSS Animation */
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .main-content__intro {
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .main-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .header__title, .main-content__title, .footer__text {
-      font-size: 1.2em;
-    }
-  }
-  @media (max-width: 768px) {
-    .main-content {
-      width: 95%;
-      max-width: 600px;
-    }
-    
-    img {
-      max-width: 100%; /* Make images take full width on small screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .main-content {
-      width: 100%;
-      padding: 0.5em;
-    }
-  
-    img {
-      max-width: 100%; /* Full width images on very small screens */
-    }
-  }
-  @media (max-width: 768px) {
-    .page-wrapper {
-      flex-direction: column; /* Stack sections vertically on smaller screens */
-    }
-    .page-wrapper__section--center {
-      width: 100%; /* Center section takes full width */
-    }
-  }
-  
+}
