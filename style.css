@@ -29,11 +29,13 @@
     text-align: center;
   }
   img {
-    max-width: 80%; /* Scale down the images */
-    height: auto;
+    width: 300px; /* Adjust this size as needed */
+    height: 200px; /* Maintain aspect ratio by adjusting height */
+    object-fit: cover; /* Ensures the image doesn't stretch */
     display: block;
-    margin: 0 auto; /* Centers the image */
+    margin: 0 auto;
   }
+  
   
   .main-content__title, .main-content__text {
     text-align: center;
@@ -74,6 +76,35 @@
   
   .main-content__text:hover, .main-content__list-item:hover {
     transform: scale(1.05);
+  }
+  .page-wrapper {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+  }
+  
+  .page-wrapper__section {
+    flex: 1;
+  }
+  
+  .page-wrapper__section--left,
+  .page-wrapper__section--right {
+    background-color: #000; /* Black for the outer sections */
+  }
+  
+  .page-wrapper__section--center {
+    background-color: #fff; /* White or any background color for the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    width: 80%; /* Adjust width to control space in the center */
+  }
+  
+  .main-content {
+    width: 100%; /* Let the main content span the entire center section */
+    max-width: 800px; /* Keep your existing maximum width for text */
   }
   
   /* BEM CSS Animation */
@@ -119,6 +150,14 @@
   
     img {
       max-width: 100%; /* Full width images on very small screens */
+    }
+  }
+  @media (max-width: 768px) {
+    .page-wrapper {
+      flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+    .page-wrapper__section--center {
+      width: 100%; /* Center section takes full width */
     }
   }
   
