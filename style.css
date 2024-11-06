@@ -133,13 +133,14 @@ aside {
 }
 
 
-.about-me-section h2 {
+.h2 {
   font-size: 2rem;
   font-family: 'Georgia', serif;
   width: 100%; 
-  border-bottom: 2px solid #333;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  color: #663399;
+  background-color: white;
 }
 
 
