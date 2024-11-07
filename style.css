@@ -91,6 +91,33 @@ aside {
   padding-left: 20px;
 }
 
+/* Set up grid for each section */
+.content-item__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Space between columns */
+  align-items: center;
+}
+
+/* Alternate layout for every other section */
+.content-item:nth-child(odd) .content-item__container {
+  grid-template-areas: "text image";
+}
+
+.content-item:nth-child(even) .content-item__container {
+  grid-template-areas: "image text";
+}
+
+/* Specify which item goes where */
+.content-item__container img {
+  grid-area: image;
+  width: 100%; /* Responsive image */
+  height: auto;
+}
+
+.content-item__container p {
+  grid-area: text;
+}
 
 .main {
   background-color: white; 

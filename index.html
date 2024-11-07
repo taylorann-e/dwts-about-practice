@@ -7,45 +7,47 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-         <h1 class="header__title">Dancing With the Stars</h1>
-         <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Cast</a></li>
-              <li><a href="#">Standings</a></li>
-            </ul>
-         </nav>
-    </header>
+  <header class="header">
+    <h1 class="header__title">Dancing With the Stars</h1>
+    <nav aria-label="Main Navigation">
+      <ul class="header__nav">
+        <li class="header__nav-item"><a href="#">Home</a></li>
+        <li class="header__nav-item"><a href="#">About</a></li>
+        <li class="header__nav-item"><a href="#">Cast</a></li>
+        <li class="header__nav-item"><a href="#">Standings</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <main class="main-content">
-        <section class="main-content__intro">
-          <h2 class="main-content__title">What is Dancing with the Stars?</h2>
-          <img src="dwts-panel-new.jpg" alt="Dancing With The Stars Judges and Hosts">
-          <p class="main-content__text">Dancing With the Stars (DWTS) is a competition reality TV show where celebrities are paired with professionally trained ballroom dancers and compete to win the Len Goodman Mirrorball Trophy. The trophy is named after the late Len Goodman who was the main judge on DWTS since its first season. It first premiered on ABC in 2005 and now is streamed on Disney Plus or ABC every Tuesday in season. The show is hosted by former Mirrorball Trophy Champion Alfonso Riberio and former Pro and multi Mirrorball Trophy Champion Julianne Hough. The show is judged by Carrie Ann Inaba, Derek Hough, and Bruno Tonioli (all are professionally trained dancers).</p>
-        </section>
+  <main class="main-content">
+    <section class="main-content__intro content-item">
+      <h2 class="main-content__title">What is Dancing with the Stars?</h2>
+      <div class="content-item__container">
+        <img src="dwts-panel-new.jpg" alt="Dancing With The Stars judges and hosts Alfonso Riberio and Julianne Hough">
+        <p class="main-content__text">Dancing With the Stars (DWTS) is a competition reality TV show where celebrities are paired with professionally trained ballroom dancers and compete to win the Len Goodman Mirrorball Trophy...</p>
+      </div>
+    </section>
+  
+    <section class="main-content__rules content-item">
+      <h2 class="main-content__title">Rules and Voting</h2>
+      <div class="content-item__container">
+        <p class="main-content__text">Each week, couples are assigned a style of dance and a song...</p>
+        <img src="mirrorball.jpg" alt="Mirrorball Trophy winners">
+      </div>
+    </section>
+  
+    <section class="main-content__theme content-item">
+      <h2 class="main-content__title">Theme Weeks</h2>
+      <div class="content-item__container">
+        <img src="maksandmeryl.jpg" alt="Maksim Chmerkovskiy and Meryl Davis, former champions">
+        <p class="main-content__text">Besides the first week, every week has a different theme that determines song choice...</p>
+      </div>
+    </section>
+  </main>
+  
 
-        <section class="main-content__rules">
-          <h2 class="main-content__title">Rules and Voting</h2>
-          <img src="mirrorball.jpg" alt="Mirrorball Champions">
-          <ul class="main-content__list">
-            <li class="main-content__list-item">Each week, couples are assigned a style of dance and a song. The professionally trained dancer (pro) is then in charge of choreographing a unique and captivating dance as well as responsible for teaching their celebrity partner how to do the dance.</li>
-            <li class="main-content__list-item">The judges will then score on technique, style, difficulty, and performance. Each judge will give a score 1-10 resulting in a total out of 30. During the show, the audience and audience at home can vote for each couple 10 times per voting method (text, website, app). The score out of 30 from the judges and votes from America are totaled, and the couple with the lowest combined total is sent home.</li>
-          </ul>
-        </section>
-
-        <section class="main-content__theme">
-          <h2 class="main-content__title">Theme Weeks</h2>
-          <img src="maksandmeryl.jpg" alt="Champions">
-          <p class="main-content__text">Besides the first week, every week has a different theme that will help determine song choice, dances, and storytelling. Some common themes every season include: Most Memorable Year, Disney Night, and Halloween Night. Other theme nights over the years have included: Rock & Roll Night, Broadway Night, Dedication Night, and nights centered around a specific artist like Michael Buble and Whitney Houston. There has also been some creative weeks over the seasons like Trio Week where a couple is assigned another pro to dance with them that week, and partner switch (The celebrities switch pros).</p>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p class="footer__text">©2024 Dancing with the Stars Fan Page</p>
-      </footer>
-    </div>
-  </div>
+  <footer class="footer">
+    <p class="footer__text">©2024 Dancing with the Stars Fan Page</p>
+  </footer>
 </body>
 </html>
